@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/emr-bean/emr-bean.iml" filepath="$PROJECT_DIR$/emr-bean/emr-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emr-mapper/emr-mapper.iml" filepath="$PROJECT_DIR$/emr-mapper/emr-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emr-service/emr-service.iml" filepath="$PROJECT_DIR$/emr-service/emr-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emr-web/emr-web.iml" filepath="$PROJECT_DIR$/emr-web/emr-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mystudy-bean/mystudy-bean.iml" filepath="$PROJECT_DIR$/mystudy-bean/mystudy-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mystudy-mapper/mystudy-mapper.iml" filepath="$PROJECT_DIR$/mystudy-mapper/mystudy-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mystudy-service/mystudy-service.iml" filepath="$PROJECT_DIR$/mystudy-service/mystudy-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mystudy-web/mystudy-web.iml" filepath="$PROJECT_DIR$/mystudy-web/mystudy-web.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpeu.mapper.UserMapper">
+	
+
+	<select id="login" resultType="User">
+		select * from hpeu_edu_user
+		<where>
+			<if test="account !=null">and account=#{account}</if>
+			<if test="password !=null">and password=#{password}</if>
+		</where>
+	</select>
+	
+	<select id="findUserByNameAndAccount" resultType="User">
+		select * from hpeu_edu_user
+		<where>
+			<if test="account !=null">and account=#{account}</if>
+			<if test="realName !=null">and realName=#{realName}</if>
+		</where>
+	</select>
+	
+	<select id="findAllUsers" resultType="User" parameterType="map">
+		select * from hpeu_edu_user
+	</select>
+</mapper>

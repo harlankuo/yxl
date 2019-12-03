@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    
+    <settings>
+        <!-- 配置日志处理器 -->
+        <setting name="logImpl" value="LOG4J2" />
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="aggressiveLazyLoading" value="true"/>
+		<setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+    </settings>
+    
+    <typeAliases>
+        <package name="com.hpeu.bean"/>
+    </typeAliases>
+ 
+
+</configuration>
+
+
+
+

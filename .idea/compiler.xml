@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="emr-web" />
+        <module name="emr-mapper" />
+        <module name="mystudy-web" />
+        <module name="mystudy-mapper" />
+        <module name="emr-service" />
+        <module name="emr-bean" />
+        <module name="mystudy-service" />
+        <module name="mystudy-bean" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="emr-bean" target="1.5" />
+      <module name="emr-mapper" target="6" />
+      <module name="emr-service" target="1.5" />
+      <module name="emr-web" target="1.5" />
+      <module name="mystudy" target="1.5" />
+      <module name="mystudy-bean" target="1.5" />
+      <module name="mystudy-mapper" target="6" />
+      <module name="mystudy-service" target="1.5" />
+      <module name="mystudy-web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

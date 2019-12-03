@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{margin:0; padding:0; font-size:12px; font-family:"宋体"; background:#e6e6e6;}
+ul{margin:0; padding:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,p{margin:0;}
+em{font-style:normal;}
+img{ border:none;}
+
+
+#main{position:relative; overflow:hidden; padding-left:15px; position:relative;}
+#main .left-side{ margin:92px 330px 0 0; position:relative;}
+.left-side-in{width:988px; margin:0px auto 0;_position:relative;}
+.main_visual{/*width:1220px;*/ margin:0 auto; position:relative; padding-left:13px;}
+.main_image {width:100%; height:592px; overflow:hidden; margin:0 auto; position:relative;z-index: 2;}
+.main_image ul {width:9999px; height:592px; overflow:hidden; position:absolute; top:0; left:0}
+.main_image li {float:left; height:592px;}
+
+div.flicking_con {width:1200px; margin:0 auto; position:relative;}
+div.flicking_cons{width:815px;}
+div.flicking_con .flicking_inner {position:absolute; top:576px; left:50%; z-index:999; width:45px;_width:50px; height:6px; margin-left:-22px; _font-size:0;} 
+div.flicking_con .flicking_inners{top:525px;}
+div.flicking_con a,div.flicking_cons a{float:left; width:6px; height:6px; margin:0 4px; padding:0; background:url('../images/images/btn_main_img.png') 0 -6px no-repeat; _background:url(../images/images/btn_main_img.gif) no-repeat 0 -6px; display:block; text-indent:-1000px;}
+div.flicking_con a.on,div.flicking_cons a.on {background-position:0 0px;}
+#btn_prev,#btn_next{z-index:20;position:absolute;display:block;width:14px!important;height:69px!important;top:50%;margin-top:-80px;display:none;}
+#btn_prev{background  :url(../images/images/hover_left.png) no-repeat left top;left:-10px;}
+#btn_next{background:url(../images/images/hover_right.png) no-repeat right top;right:0px;}
+
+.desktop{height:17px; border-left:2px solid #02adee; padding-left:13px; font-size:14px; font-weight:bold; color:#353535; position:absolute; top:44px; left:37px;}
+
+.mode{width:310px; height:160px; float:left; border-bottom:1px solid #2c97dd; background:#fff; margin:0 10px 10px 0; position:relative; cursor:pointer; overflow:hidden;}
+.mode h4{height:24px;color:#000; font-size:14px;margin:14px 0 0 15px; padding-left:28px; line-height:24px; background-position:0px 0px;}
+.mode h4.yiji{ background: url(../images/images/yiji_icon.png) no-repeat;}
+.mode .number{float:left; width:154px; text-align:center;  border-right:1px solid #ededed; padding:4px 0 0 0;}
+.mode .number span{font-size:52px; color:#2c97dd; font-family:Arial, Helvetica, sans-serif;}
+.mode .number p{text-align:center; position:relative; top:2px;}
+.mode .btm{height:28px; clear:both; padding-top:9px; position:absolute; bottom:0; left:0; width:100%;}
+.mode .btm .refresh{width:9px; height:11px; display:block; background:url(../images/images/refresh_icon.png) no-repeat; float:right; margin:9px 0 0 0;}
+.mode .btm span{float:right; color:#bfbfbf; padding:8px 20px 0 8px;_padding:10px 20px 0 8px;}
+
+.mode h4.appt{background:url(../images/images/pc_icon.png) no-repeat;}
+.mode h4.medcail{background:url(../images/images/pc_icon.png) no-repeat;}
+.mode h4.bel{background:url(../images/images/bel_icon.png) no-repeat; float:left;_margin:16px 0 0 10px;}
+.mode h4.bb{background:url(../images/images/bb_icon.png) no-repeat; float:left;_margin:16px 0 0 10px;}
+.mode h4.userd{background:url(../images/images/userd_icon.png) no-repeat;}
+.mode h4.science{background:url(../images/images/science_icon.png) no-repeat;}
+
+.mode .chart{width:145px; height:72px; float:left; padding:8px 0 0 24px; _padding:3px 0 0 24px;}
+.mode .appnum{float:left; width:140px; text-align:center;padding:4px 0 0 0;}
+.mode .appnum span{font-size:52px; color:#01adee; font-family:Arial, Helvetica, sans-serif;}
+.mode .appnum p{text-align:center; position:relative; top:2px;}
+.mode .movie{padding:0 0 0 37px; background:url(../images/images/dot_s.png) no-repeat 23px 17px;}
+.mode .movie p{color:#353535; padding-top:12px;}
+.mode .movie p a{color:#02adee; text-decoration:underline; margin-right:16px;}
+
+.announce{height:331px;}
+.announce .more{float:right; width:22px; height:12px; background:url(../images/images/more_icon.png) no-repeat 0 center; padding:28px 24px 0px 0;}
+.announce .hospital{height:151px; clear:both; padding:5px 0 14px 0;}
+.announce h5{font-size:12px; padding:0 0 8px 20px;}
+.announce p{padding:0 20px; line-height:1.8;}
+.announce p a{color:#02adee; text-decoration:none;}
+
+.announce .bbiao{height:132px; padding:0 24px 0; clear:both;}
+.announce .m-num{height:50px; padding:38px 15px 0;}
+.announce .m-num div{ width:68px; float:left; padding:0 10px;}
+.announce .m-num div span{font-size:24px; color:#353535; font-family:Arial, Helvetica, sans-serif; text-align:center; display:block;}
+.announce .m-num div p{text-align:center; padding:0;}
+
+.announce .m-num div.org span{color:#ff3300;}
+.announce .m-num div.org p{ color:#ff3300;}
+
+.lay{ width:310px; height:329px; float:left;}
+/*********用药协同***************/
+.mode .drug{height:80px; text-align:center;}
+.mode .drug span{display:inline-block; _width:50px; height:18px; line-height:18px; padding:0 0 0 30px; margin-top:30px; background: url(../images/images/warn_icon.png) no-repeat; color:#bfbfbf;}
+
+.moveenter{width:310px; height:160px; float:left; border-bottom:1px solid #2c97dd; margin:0 10px 10px 0;background:#2c97dd; position:absolute; left:0; top:172px; z-index:11;}
+.moveenter h4{height:24px;color:#000; font-size:14px;margin:14px 0 0 15px; padding-left:28px; line-height:24px; background-position:0px 0px;}
+.moveenter h4.yiji{background-position:0 -24px; color:#fff;}
+.moveenter h4.appt{background-position:0 -24px; color:#fff;}
+.moveenter h4.medcail{background-position:0 -24px; color:#fff;}
+.moveenter h4.bel{background-position:0 -24px; color:#fff;}
+.moveenter h4.bb{background-position:0 -24px; color:#fff;}
+.moveenter h4.userd{background-position:0 -24px; color:#fff;}
+.moveenter h4.science{background-position:0 -24px; color:#fff;}
+.moveenter .number{float:left; width:140px; text-align:center;padding:4px 0 0 0;}
+.moveenter .number span{font-size:52px; color:#fff; font-family:Arial, Helvetica, sans-serif;}
+.moveenter .number p{text-align:center; position:relative; top:2px;}
+.moveenter .btm{height:28px; clear:both; padding-top:9px; position:absolute; bottom:0; left:0; width:100%;}
+.moveenter .btm span{color:#fff;}
+.moveenter .btm .refresh{width:9px; height:11px; display:block; float:right; margin:9px 0 0 0;background:url(../images/images/refresh_icon_w.png) no-repeat;}
+.moveenter .chart{width:145px; height:72px; float:left; padding:8px 0 0 24px; _padding:3px 0 0 24px;}
+.moveenter .appnum{float:left; width:140px; text-align:center;padding:4px 0 0 0;}
+.moveenter .appnum span{color:#fff; padding:8px 20px 0 8px;_padding:10px 20px 0 8px;}
+.moveenter .appnum p{color:#fff;text-align:center; position:relative; top:2px;}}
+.moveenter .movie p{color:#fff;}
+.moveenter .movie p a{color:#fff;}
+.moveenter h5{color:#fff;}
+.mode .moveenter p{color:#fff;}
+.moveenter p a{color:#fff;}
+.moveenter .m-num div span{color:#fff;}
+.moveenter .drug span{color:#fff; background:url(../images/images/warn_icon_w.png) no-repeat;}
+.moveenter .more{background:url(../images/images/more_icon_w.png) no-repeat 0 center; cursor:pointer;}
+.movebig{width:310px; height:331px;position:absolute; left:0; top:331px; z-index:11;}
+
+#col{width:29px; height:28px; background:url(../images/images/hidden.gif) no-repeat; position:absolute; top:0; right:301px; display:block; z-index:99;}
+#exp{width:29px; height:28px; background: url(../images/images/shows.gif) no-repeat; position:absolute; top:0; right:0; display:block; z-index:99; display:none;}
+
+.right-side{width:330px; float:left; height:600px; position: absolute; top:0; right:0;  background:url(../images/images/right-side_bg.png) repeat; z-index:2;}
+.right-side-in{margin:48px 32px 0;}
+.right-side-in h4{height:20px; border-left:2px solid #269956; padding-left:10px; font-family:"微软雅黑"; color:#010101; font-size:14px; line-height:20px;}
+
+.work{height:54px; border-bottom:1px solid #bfbfbf;}
+.work .city{float:left; text-decoration:none; color:#000; padding:15px 6px 0 0; line-height:30px;}
+.work span.weather{float:left; padding:15px 0 0 37px; background:url(../images/images/sundy_icon.png) no-repeat 0 16px; margin:0 8px 0 6px;}
+.work span p{ padding-bottom:2px;}
+.work span.line{width:1px; height:22px; background:#bfbfbf; float:left; font-size:0; padding:0;margin:19px 0px 0;}
+.work span.date{float:left; padding:15px 0 0 37px; background: url(../images/images/date_icon.png) no-repeat 0 16px; margin:0 6px;}
+
+.place{border-bottom:1px solid #bfbfbf; padding:22px 8px 0;}
+.place .title{height:24px;}
+.place .title h5{height:24px; padding:0 0 0 24px; float:left; font-size:14px; line-height:24px; position:relative;}
+.place .title h5.tzhi{ background:url(../images/images/notice2.png) no-repeat;}
+.place .title h5.todo{background:url(../images/images/todo_icon.png) no-repeat;}
+.place .title h5.commonly{background:url(../images/images/personal.png) no-repeat;}
+.place .title h5 .red-dot{width: 17px;height: 16px;background: url(../images/images/red_dot.png) no-repeat;color: #fff;font-size: 10px;text-align: center;line-height: 16px;position: absolute;top: 3px;right: -23px; font-weight:normal;}
+.place .title a{width:18px; height:19px; float:right; margin:2px 0px 0 0; display:block;}
+.place .title a.detail{background:url(../images/images/detail_icon.png) no-repeat;}
+.place .title a.add{background:url(../images/images/add_icon.png) no-repeat;}
+.place ul li{ border-bottom:1px dashed #bfbfbf; padding:16px 20px 16px 0; position:relative;}
+.place ul li p{ line-height:1.5;}
+.place ul li a{display:block; width:10px; height:9px; font-size:0; background:url(../images/images/del_icon.png) no-repeat; position:absolute; top:50%; right:0; margin-top:-8px;}
+.contact{padding:18px 0 0 0; overflow:hidden; position:relative;}
+.contact ul li{width:50px; height:50px; float:left; margin-right:21px; position:relative; padding:0; border-bottom:0;}
+.contact ul li .round{width:50px; height:50px; position:absolute; top:0; left:0; background:url(../images/images/lxr.png) no-repeat; z-index:11;}
+.contact ul li a{display:block; width:10px; height:9px; font-size:0; background:url(../images/images/del_icon.png) no-repeat; position:absolute; top:0; right:-6px; z-index:11111; margin:0;}
+.contact ul li em{width:6px; height:6px; font-size:0; line-height:0; position:absolute; bottom:6px; right:5px; background:url(../images/images/sub_dot.png) no-repeat; z-index:11111;}
+.contact .next{font-size:24px; color:#353535; position:absolute; right:2px; top:50%; margin-top:-5px; text-decoration:none;}
+
+.aa{margin-right:0 !important;}
+.logo{width:196px; height:66px; background:url(../images/images/logo.png) no-repeat; position:absolute; right:26px; bottom:26px; z-index:1;}
+

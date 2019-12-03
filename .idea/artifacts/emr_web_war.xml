@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="emr-web:war">
+    <output-path>$PROJECT_DIR$/emr-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>emr-web</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="emr-web-1.0.0.war">
+      <element id="artifact" artifact-name="emr-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.hpeu.mapper.PatientMapper">
+	<select id="findAllPatient" resultType="Patient">
+		select * from tb_patients 
+	</select>
+	<select id="findPatientById" resultType="Patient">
+		select * from tb_patients where id =#{id}
+	</select>
+	
+	<select id="findPatient" resultType="Patient">
+		select * from tb_patients 
+		<where>
+			<if test="name !=null and name !=''">and name=#{name}</if>
+			<if test="age !=null and age !=''">and age=#{age}</if>
+			<if test="sex !=null and sex !=''">and sex=#{sex}</if>
+			<if test="idCard !=null and idCard !=''">and idCard=#{idCard}</if>
+			<if test="nativePlace !=null and nativePlace !=''">and nativePlace=#{nativePlace}</if>
+		</where>
+	</select>
+	
+	<select id="findRecordById" resultType="SickRecord">
+		SELECT * FROM tb_patients_record r LEFT JOIN tb_patients p ON r.pid=p.id WHERE id =#{id}
+	</select>
+	<select id="findMedicalRecordById" resultType="MedicalRecord">
+		SELECT * FROM tb_medical_record m LEFT JOIN tb_patients p ON m.pid=p.id WHERE id =#{id}
+	</select>
+</mapper>

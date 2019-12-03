@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
+<!--status="WARN" :用于设置log4j2自身内部日志的信息输出级别，默认是OFF-->
+<!--monitorInterval="30" :间隔秒数,自动检测配置文件的变更和重新配置本身-->
+<Configuration status="WARN" monitorInterval="30">
+    <!--appenders:定义输出内容,输出格式,输出方式,日志保存策略等,
+    	常用其下三种标签[console,File,RollingFile]-->
+	<Appenders>
+	    <!--console :控制台输出的配置-->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<!-- 对日志文件进行封存 -->
+		<RollingFile name="RollingFileInfo" fileName="logs/info.log"
+			filePattern="logs/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-%i.log">
+			<!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch） -->
+			<ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="100 MB" />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="RollingFileWarn" fileName="logs/warn.log"
+			filePattern="logs/$${date:yyyy-MM}/warn-%d{yyyy-MM-dd}-%i.log">
+			<ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="100 MB" />
+			</Policies>
+			<!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
+			<DefaultRolloverStrategy max="20" />
+		</RollingFile>
+		<RollingFile name="RollingFileError" fileName="logs/error.log"
+			filePattern="logs/$${date:yyyy-MM}/error-%d{yyyy-MM-dd}-%i.log">
+			<ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="100 MB" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Root level="all">
+			<AppenderRef ref="Console" />
+			<appenderRef ref="RollingFileInfo" />
+			<appenderRef ref="RollingFileWarn"/>
+            <appenderRef ref="RollingFileError"/>
+		</Root>
+		<!-- 打印SQL语句 -->
+		<logger name="java.sql" level="DEBUG"></logger>
+		<logger name="org.apache.ibatis" level="INFO"></logger>
+	</Loggers>
+</Configuration>
